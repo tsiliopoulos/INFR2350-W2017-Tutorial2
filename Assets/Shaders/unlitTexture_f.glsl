@@ -1,6 +1,6 @@
 #version 400
 
-/// CODE HERE ////////////////////////////////////////////////////////////
+uniform sampler2D u_tex;
 
 // Fragment Shader Inputs
 in VertexData
@@ -15,5 +15,5 @@ layout(location = 0) out vec4 FragColor;
 
 void main()
 {
-	/// CODE HERE ////////////////////////////////////////////////////////////
+	FragColor = texture(u_tex, vIn.texCoord.xy);
 }

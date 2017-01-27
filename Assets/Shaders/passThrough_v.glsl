@@ -24,5 +24,7 @@ out VertexData
 
 void main() 
 {
-	/// CODE HERE ////////////////////////////////////////////////////////////
+	vOut.texCoord = vIn_uv;
+	gl_Position = u_mvp * vec4(vIn_vertex, 1.0);
+    
 }

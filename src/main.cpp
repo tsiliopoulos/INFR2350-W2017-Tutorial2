@@ -107,7 +107,7 @@ void initializeScene()
 
 	floorMesh->loadMesh(meshPath + "floor.obj");
 	sphereMesh->loadMesh(meshPath + "sphere.obj");
-	torusMesh->loadMesh(meshPath + "torus.obj");
+	torusMesh->loadMesh(meshPath + "cone.obj");
 
 	// Note: looking up a mesh by it's string name is not the fastest thing,
 	// you don't want to do this every frame, once in a while (like now) is fine.
@@ -156,7 +156,7 @@ void initializeScene()
 
 void initializeFrameBufferObjects()
 {
-	/// CODE HERE ////////////////////////////////////////////////////////////
+	fbo.createFrameBuffer(windowWidth, windowHeight, 1, true);
 }
 
 void updateScene()
@@ -216,8 +216,11 @@ void DisplayCallbackFunction(void)
 			/// CODE HERE ////////////////////////////////////////////////////////////
 
 			// Clear back buffer
-			glClearColor(0.8f, 0.8f, 0.8f, 0.0f);
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			//glClearColor(0.8f, 0.8f, 0.8f, 0.0f);
+			//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+			fbo.unbindFrameBuffer(windowWidth, windowHeight);
+			fbo.clearFrameBuffer(glm::vec4(0.8f, 0.8f, 0.8f, 0.8f));
 
 			// Just draw the scene to the back buffer
 			drawScene(playerCamera);
@@ -226,7 +229,36 @@ void DisplayCallbackFunction(void)
 
 		case FBO_DEMO: // press 2
 		{
-			/// CODE HERE ////////////////////////////////////////////////////////////
+			fbo.bindFrameBufferForDrawing();
+			fbo.clearFrameBuffer(glm::vec4(0.8f, 0.8f, 0.8f, 0.0f));
+
+			drawScene(renderCamera);
+
+			// draw the quad
+			unlitTextureMaterial->shader->bind();
+			fbo.bindTextureForSampling(0, GL_TEXTURE0);
+			unlitTextureMaterial->intUniforms["u_tex"] = 0;
+			// create model matrix
+			glm::mat4 quadModelMatrix =
+				glm::translate(glm::vec3(0.0f)) *
+				glm::rotate(0.0f, glm::vec3(0.0f, 0.0f, 1.0f)) *
+				glm::rotate(0.0f, glm::vec3(0.0f, 1.0f, 0.0f)) *
+				glm::rotate(0.0f, glm::vec3(1.0f, 0.0f, 0.0f)) *
+				glm::scale(glm::vec3(4.0f));
+			
+			unlitTextureMaterial->mat4Uniforms["u_mvp"] =
+				playerCamera.viewProjMatrix * quadModelMatrix;
+
+			unlitTextureMaterial->sendUniforms();
+
+			
+			fbo.unbindFrameBuffer(windowWidth, windowHeight);
+			fbo.clearFrameBuffer(glm::vec4(0.2f, 0.2f, 1.0f, 0.0f));
+
+
+			// draw the quad to the backbuffer
+			meshes["quad"]->draw();
+
 		}
 		break;
 
