@@ -45,6 +45,15 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{3a82eb2d-86d5-4641-9daa-4ba7728f1662}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{27adac4b-5bac-474b-bd37-f83dff7b1420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Models">
+      <UniqueIdentifier>{83fbd0fd-d6ed-4a6e-849b-82db0d736be4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Textures">
+      <UniqueIdentifier>{08386959-c80e-4bda-880f-b13e0b86425e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\TTK\MeshBase.h">
@@ -97,5 +106,27 @@
     <None Include="..\Assets\Shaders\passThrough_v.glsl">
       <Filter>Shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="..\Assets\Models\cone.obj">
+      <Filter>Assets\Models</Filter>
+    </Object>
+    <Object Include="..\Assets\Models\floor.obj">
+      <Filter>Assets\Models</Filter>
+    </Object>
+    <Object Include="..\Assets\Models\sphere.obj">
+      <Filter>Assets\Models</Filter>
+    </Object>
+    <Object Include="..\Assets\Models\torus.obj">
+      <Filter>Assets\Models</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Textures\dkong.png">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\dkong2.png">
+      <Filter>Assets\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

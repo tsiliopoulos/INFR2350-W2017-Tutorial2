@@ -114,6 +114,16 @@
     <None Include="..\Assets\Shaders\passThrough_v.glsl" />
     <None Include="..\Assets\Shaders\unlitTexture_f.glsl" />
   </ItemGroup>
+  <ItemGroup>
+    <Object Include="..\Assets\Models\cone.obj" />
+    <Object Include="..\Assets\Models\floor.obj" />
+    <Object Include="..\Assets\Models\sphere.obj" />
+    <Object Include="..\Assets\Models\torus.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Textures\dkong.png" />
+    <Image Include="..\Assets\Textures\dkong2.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
