@@ -12,7 +12,7 @@ in VertexData
 	vec3 posEye;
 } vIn;
 
-layout(location = 0) out vec4 FragColor;
+layout(location = 0) out vec4 FragColor; // corresponds to the FBO attachments
 
 void main()
 {

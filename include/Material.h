@@ -16,7 +16,7 @@ public:
 		: shader(std::make_shared<ShaderProgram>())
 	{}
 
-	void sendUniforms()
+	void sendUniforms() // send data to the GPU
 	{
 		// Send vector4 uniforms
 		for (auto itr = vec4Uniforms.begin(); itr != vec4Uniforms.end(); itr++)
