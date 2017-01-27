@@ -427,7 +427,7 @@ int main(int argc, char **argv)
 
 	// Init GL
 	glEnable(GL_DEPTH_TEST);
-	glDepthFunc(GL_LEQUAL);
+	glDepthFunc(GL_LESS);
 
 	// Initialize scene
 	initializeShaders();
