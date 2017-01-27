@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\MeshBase.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\Texture2D.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ShaderProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\IO.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TTK\OBJMesh.cpp">
+      <Filter>TTK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FrameBufferObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VertexBufferObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2ce68366-3080-46f3-a152-a1b32e341ae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{043156ea-2636-4bbd-b3c6-9072611b894c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TTK">
+      <UniqueIdentifier>{ebd413da-73d9-467f-be23-4e2cadb96ef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{3a82eb2d-86d5-4641-9daa-4ba7728f1662}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\TTK\MeshBase.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\Texture2D.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\Camera.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ShaderProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\OBJMesh.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TTK\IO.h">
+      <Filter>TTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FrameBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\VertexBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Assets\Shaders\default_f.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\default_v.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\invertFilter_f.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\unlitTexture_f.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\passThrough_v.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
